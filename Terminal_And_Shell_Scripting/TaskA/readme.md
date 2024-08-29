@@ -1,7 +1,9 @@
 
 # Task A
 ## Assignment Number 2 in M1
+# Simulation
 
+![Assignment Number 2 in M1](file_organizer.gif)
 ## Project Idea: File Organizer
 
 The goal of this project is to create a Bash script that organizes files in a specified directory based on their file types into separate subdirectories. This can be useful to keep your directories clean and tidy by automatically sorting files into appropriate categories.
@@ -39,6 +41,3 @@ Downloads/
 |   |-- file5_without_extension
 |   |-- file6.unknown
 
-# Simulation
-
-![Assignment Number 2 in M1](file_organizer.gif)
