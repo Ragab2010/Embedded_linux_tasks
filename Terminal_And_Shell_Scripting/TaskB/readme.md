@@ -1,5 +1,8 @@
 # Task (B)
 ## Bash Project Idea: Process Monitor
+# Simulation
+
+![Bash Project Idea: Process Monitor](process_monitor.gif)
 
 ### Project Overview
 Create a Bash script that serves as a simple process monitor, allowing users to view, manage, and analyze running processes on a Unix-like system.
@@ -52,6 +55,3 @@ CPU_ALERT_THRESHOLD=90
 MEMORY_ALERT_THRESHOLD=80
 
 ```
-# Simulation
-
-![Bash Project Idea: Process Monitor](process_monitor.gif)
