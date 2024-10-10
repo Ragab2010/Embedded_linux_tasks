@@ -348,12 +348,15 @@ Compile and test the `HelloIoTApp` application using the Yocto SDK.
 
 - **Steps:**
   1. To generate SDK.
-```bash
+````bash
 bitbake  iotgateway-image -c populate_sdk
-```
+````
+
   2. Source the Yocto SDK environment.
+
   ````bash
-  ragab@mint:/media/ragab/2e6aa1be-2f37-440f-9a02-a6118b45e071/yocto_image/poky/build/tmp/deploy/sdk$ ./poky-glibc-x86_64-iotgateway-image-cortexa57-qemuarm64-toolchain-4.0.21.sh --help
+  ragab@mint:/poky/build/tmp/deploy/sdk$ 
+  ./poky-glibc-x86_64-iotgateway-image-cortexa57-qemuarm64-toolchain-4.0.21.sh --help
 Usage: poky-glibc-x86_64-iotgateway-image-cortexa57-qemuarm64-toolchain-4.0.21.sh [-y] [-d <dir>]
   -y         Automatic yes to all prompts
   -d <dir>   Install the SDK to <dir>
@@ -368,16 +371,16 @@ Usage: poky-glibc-x86_64-iotgateway-image-cortexa57-qemuarm64-toolchain-4.0.21.s
 
 
 
-agab@mint:/media/ragab/2e6aa1be-2f37-440f-9a02-a6118b45e071/yocto_image/poky/build/tmp/deploy/sdk$ ./poky-glibc-x86_64-iotgateway-image-cortexa57-qemuarm64-toolchain-4.0.21.sh -d .
+agab@mint:/poky/build/tmp/deploy/sdk$ ./poky-glibc-x86_64-iotgateway-image-cortexa57-qemuarm64-toolchain-4.0.21.sh -d .
 Poky (Yocto Project Reference Distro) SDK installer version 4.0.21
 ==================================================================
-You are about to install the SDK to "/media/ragab/2e6aa1be-2f37-440f-9a02-a6118b45e071/yocto_image/poky/build/tmp/deploy/sdk". Proceed [Y/n]? y
+You are about to install the SDK to "/poky/build/tmp/deploy/sdk". Proceed [Y/n]? y
 Extracting SDK......................................................................................................................................................................................................................................................................done
 Setting it up...done
 SDK has been successfully set up and is ready to be used.
 Each time you wish to use the SDK in a new shell session, you need to source the environment setup script e.g.
- $ . /media/ragab/2e6aa1be-2f37-440f-9a02-a6118b45e071/yocto_image/poky/build/tmp/deploy/sdk/environment-setup-cortexa57-poky-linux
-ragab@mint:/media/ragab/2e6aa1be-2f37-440f-9a02-a6118b45e071/yocto_image/poky/build/tmp/deploy/sdk$ ls
+ $ . /poky/build/tmp/deploy/sdk/environment-setup-cortexa57-poky-linux
+ragab@mint:/poky/build/tmp/deploy/sdk$ ls
 environment-setup-cortexa57-poky-linux
 poky-glibc-x86_64-iotgateway-image-cortexa57-qemuarm64-toolchain-4.0.21.host.manifest
 poky-glibc-x86_64-iotgateway-image-cortexa57-qemuarm64-toolchain-4.0.21.sh
@@ -388,22 +391,24 @@ sysroots
 version-cortexa57-poky-linux
 
 
-ragab@mint:/media/ragab/2e6aa1be-2f37-440f-9a02-a6118b45e071/yocto_image/poky/build/tmp/deploy/sdk$ source environment-setup-cortexa57-poky-linux 
+ragab@mint:/poky/build/tmp/deploy/sdk$ source environment-setup-cortexa57-poky-linux 
 
 
 
-ragab@mint:/media/ragab/2e6aa1be-2f37-440f-9a02-a6118b45e071/yocto_image/poky/meta-iotgateway/recipes-iot/helloiotapp/files$ env | grep CXX
-CXX=aarch64-poky-linux-g++  -mcpu=cortex-a57 -march=armv8-a+crc -mbranch-protection=standard -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security --sysroot=/media/ragab/2e6aa1be-2f37-440f-9a02-a6118b45e071/yocto_image/poky/build/tmp/deploy/sdk/sysroots/cortexa57-poky-linux
+ragab@mint:/poky/meta-iotgateway/recipes-iot/helloiotapp/files$ env | grep CXX
+CXX=aarch64-poky-linux-g++  -mcpu=cortex-a57 -march=armv8-a+crc -mbranch-protection=standard
+ -fstack-protector-strong  -O2 -D_FORTIFY_SOURCE=2 -Wformat -Wformat-security -Werror=format-security 
+ --sysroot=/poky/build/tmp/deploy/sdk/sysroots/cortexa57-poky-linux
 CXXFLAGS= -O2 -pipe -g -feliminate-unused-debug-types 
 
 
 ````
   3. Compile and test the application using cross-compilation:
 
-```bash
+````bash
 source /opt/poky/2.5.1/environment-setup-aarch64-poky-linux
 g++ helloiotapp.cpp -o helloiotapp -lssl -lcrypto
-```
+````
 
 ![Task 7 Demo GIF](./gif/task7.gif)
 
