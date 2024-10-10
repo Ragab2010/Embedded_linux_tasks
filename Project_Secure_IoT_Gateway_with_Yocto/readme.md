@@ -3,7 +3,7 @@
 
 # IoT Gateway Yocto Project
 
-![Project Overview GIF](./Project_Overview.gif)
+![Project Overview GIF](./gif/Project_Overview.gif)
 
 This project demonstrates creating a secure IoT application using Yocto, OpenSSL, and QEMU. The following tasks outline the steps to build a custom Yocto image that includes the `HelloIoTApp`, a simple application demonstrating secure communication between devices.
 
@@ -32,7 +32,7 @@ Create a new Yocto layer named `meta-iotgateway` to organize and manage custom r
      ```
    - Define your layer dependencies, e.g., for Qt5, OpenGL, and VSOMEIP, by adding the appropriate entries in the `conf/layer.conf` file of `meta-iotgateway`.
 
-![Task 1 Demo GIF](./task1.gif)
+![Task 1 Demo GIF](./gif/task1.gif)
 
 ---
 
@@ -173,7 +173,7 @@ FILES_${PN} += "${sysconfdir}/ssl/private/server.key"
   - `/etc/ssl/certs/server.crt`
   - `/etc/ssl/private/server.key`
 
-![Task 2 Demo GIF](./task2.gif)
+![Task 2 Demo GIF](./gif/task2.gif)
 
 ---
 
@@ -267,7 +267,7 @@ SYSTEMD_AUTO_ENABLE = "enable"
 
 
 
-![Task 3 Demo GIF](./task3.gif)
+![Task 3 Demo GIF](./gif/task3.gif)
 
 ---
 
@@ -282,7 +282,7 @@ Leverage machine features to ensure the image supports relevant hardware capabil
   ````
   2. Enable hardware features
 
-![Task 4 Demo GIF](./task4.gif)
+![Task 4 Demo GIF](./gif/task4.gif)
 
 ---
 
@@ -309,7 +309,7 @@ DISTRO_FEATURES:append = " \
 "
 ```
 
-![Task 5 Demo GIF](./task5.gif)
+![Task 5 Demo GIF](./gif/task5.gif)
 
 ---
 
@@ -338,7 +338,7 @@ IMAGE_INSTALL:append = " \
 "
 ```
 
-![Task 6 Demo GIF](./task6.gif)
+![Task 6 Demo GIF](./gif/task6.gif)
 
 ---
 
@@ -405,10 +405,10 @@ source /opt/poky/2.5.1/environment-setup-aarch64-poky-linux
 g++ helloiotapp.cpp -o helloiotapp -lssl -lcrypto
 ```
 
-![Task 7 Demo GIF](./task7.gif)
+![Task 7 Demo GIF](./gif/task7.gif)
 
-![Task 7 Demo GIF](./task7_1.gif)
+![Task 7 Demo GIF](./gif/task7_1.gif)
 
-![Task 7 Demo GIF](./task7_2.gif)
+![Task 7 Demo GIF](./gif/task7_2.gif)
 
 ---
